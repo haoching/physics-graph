@@ -7,7 +7,7 @@ y_name = input("輸入 y 軸名稱")
 
 
 
-x, y = np.loadtxt(f'interference_data.csv', delimiter = ',', usecols = (0, 1), unpack = True)
+x, y = np.loadtxt(f'data.csv', delimiter = ',', usecols = (0, 1), unpack = True)
 
 A = np.vstack([x, np.ones(len(x))]).T
 m, c = np.linalg.lstsq(A, y, rcond = -1)[0] # 計算回歸直線
